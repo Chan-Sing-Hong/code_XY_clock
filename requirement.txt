@@ -1,0 +1,6 @@
+use linux / wsl2
+
+install anaconda / miniconda
+
+install latest cytnx
+(https://kaihsinwu.gitlab.io/Cytnx_doc/adv_install.html)
