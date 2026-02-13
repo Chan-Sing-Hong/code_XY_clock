@@ -1,7 +1,7 @@
 from all_fn import *
 
 # Parameters setup
-model_name = #model_name#
+model_name = "#model_name#"
 symm = #symm#
 dcut = #dcut#
 Lmax = #Lmax#
@@ -27,7 +27,6 @@ HOTRG.trgstep = int(np.floor(np.log2(Lmax/unit_size)))
 Ls = unit_size * 2**np.arange(0, HOTRG.trgstep+1)
 
 print("{}, symm={}, D={}".format(model.name, model.symm, HOTRG.dcut))
-print("T = ", T)
 print("L = ", Ls)
 
 # Folders creation

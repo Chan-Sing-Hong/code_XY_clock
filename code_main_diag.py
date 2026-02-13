@@ -1,6 +1,6 @@
 from all_fn import *
 
-model_name = # model_name#
+model_name = "#model_name#"
 symm = #symm#
 dcut = #dcut#
 Lmax = #Lmax#
@@ -32,7 +32,6 @@ Ls = [Ls_tot[iL]]
 # Ls = Ls_tot
 
 print("{}, symm={}, D={}".format(model.name, model.symm, HOTRG.dcut))
-print("T = ", T)
 print("L = ", Ls)
 print("D={}, n={}, num_collect={}".format(HOTRG.dcut,n,num_collect))
 
