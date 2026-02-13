@@ -5,8 +5,8 @@ import scipy as sp
 import re
 from pathlib import Path
 import sys
-# sys.path.insert(0, "/home/chansh/cytnx_install")
-sys.path.insert(0, "/home/chansh/cytnx_install_12_Nov_2025")
+# sys.path.insert(0, "/home/chansh/cytnx_install_12_Nov_2025")
+sys.path.insert(0, "/home/chansh/cytnx_install")
 import cytnx as cy
 
 class Model():
