@@ -99,15 +99,26 @@ The bond-dimension cutoff used in HOTRG.
 ---
 
 `Lmax`\
-Maximum system size 
-$L$.
+Upper limit of system size $L$.
 
 ---
 
 `unit_size`\
-Controls the base system size.\
-The initial $T$ tensor is exactly contracted to system size `unit_size * unit_size`.\
-After N steps HOTRG, the system size becomes $L = $ unit_size $ \times 2^N $.
+Controls the initial size of the system before applying HOTRG.\
+The elementary tensor $T^{(1,1)}$ is first exactly contracted into system size `unit_size * unit_size`.\
+For example, when `unit_size=3`, we produces an effective tensor $T^{(3,3)}$ representing a $3\times 3$ lattice.
+````
+     ┏━┷━┓ ┏━┷━┓ ┏━┷━┓
+    ─┨ T ┠─┨ T ┠─┨ T ┠─
+     ┗━┯━┛ ┗━┯━┛ ┗━┯━┛
+     ┏━┷━┓ ┏━┷━┓ ┏━┷━┓          ┏━━━┷━━━┓    
+    ─┨ T ┠─┨ T ┠─┨ T ┠─   =    ─┨ T_3x3 ┠─
+     ┗━┯━┛ ┗━┯━┛ ┗━┯━┛          ┗━━━┯━━━┛
+     ┏━┷━┓ ┏━┷━┓ ┏━┷━┓
+    ─┨ T ┠─┨ T ┠─┨ T ┠─
+     ┗━┯━┛ ┗━┯━┛ ┗━┯━┛
+````
+After N steps HOTRG, the system size becomes $L = 3 \times 2^N $.
 
 ---
 
