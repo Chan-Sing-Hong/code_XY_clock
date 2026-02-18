@@ -15,9 +15,9 @@ hermitian = #hermitian#
 model = Model(model_name, symm)
 
 if iteration == 300:
-    Tc = model.Tc
-    if type(Tc) != list:
-        Ts_tot = [Tc]
+    Ts_tot = model.Tc
+    if type(Ts_tot) != list:
+        Ts_tot = [Ts_tot]
 elif iteration == 0:
     Ts_tot = np.arange(0.8, 0.96+0.02, 0.02)
 
